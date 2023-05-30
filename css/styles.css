@@ -26,6 +26,14 @@ ul {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
 h1,
 h2,
 h3,
@@ -151,7 +159,6 @@ p {
   }
 
   .mobile-menu-list {
-    text-decoration: none;
     font-size: 36px;
     display: flex;
     flex-direction: column;
@@ -160,8 +167,6 @@ p {
   }
 
   .mobile-menu-address {
-    text-decoration: none;
-    list-style: none;
     display: flex;
     flex-direction: column;
     row-gap: 40px;
