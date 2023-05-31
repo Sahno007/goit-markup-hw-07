@@ -350,6 +350,75 @@ p {
 
 /*================ Section 1 =================*/
 @media screen and (min-width: 428px) {
+  .one {
+    background-color: var(--background-hero-color);
+    padding-top: 188px;
+    padding-bottom: 188px;
+    max-width: 428px;
+    max-height: 432px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .hero {
+    font-size: 36px;
+    line-height: 1.07;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    max-width: 320px;
+    margin: auto;
+    margin-bottom: 48px;
+  }
+
+  .button {
+    background-color: var(--logo-button-color);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .button:hover,
+  .button:focus {
+    background-color: #404bbf;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .one {
+    max-width: 768px;
+    max-height: 436px;
+  }
+  .hero {
+    font-size: 56px;
+    max-width: 496px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .one {
+    max-width: 1440px;
+    max-height: 600px;
+  }
 }
 
 /* .one {
