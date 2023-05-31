@@ -349,6 +349,8 @@ p {
 /*============================= Main Content ==========================*/
 
 /*================ Section 1 =================*/
+@media screen and (min-width: 428px) {
+}
 
 /* .one {
   background-color: var(--background-hero-color);
