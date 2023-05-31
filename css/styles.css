@@ -320,6 +320,14 @@ p {
   .list-menu {
     display: flex;
   }
+  .list {
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  .numbers {
+    display: flex;
+  }
 }
 
 /* .header-container {
@@ -345,13 +353,13 @@ p {
   margin-right: 76px;
 }
 
-.list-menu {
-  display: flex;
-}
-
 .log {
   color: var(--main-text-color);
 }
+
+/* .list-menu {
+  display: flex;
+} */
 
 /* .list {
   list-style: none;
