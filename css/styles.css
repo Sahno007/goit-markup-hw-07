@@ -56,35 +56,125 @@ p {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
+.header-container {
+  display: flex;
+}
 
-/*===================== Navigation ======================*/
+/* ==============LOGO=============== */
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--logo-button-color);
+  text-decoration: none;
+  margin-right: 76px;
+  padding: 24px 0;
+}
+
+.log {
+  color: var(--main-text-color);
+}
+
+/*===================== Header + Navigation ======================*/
 
 .container {
   padding-left: 16px;
   padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
+@media screen and (min-width: 320px) {
+  .nav-logo {
+    display: flex;
+    align-items: center;
+  }
 
-@media screen and (min-width: 428px) {
-  .container {
-    width: 428px;
-    margin-left: auto;
-    margin-right: auto;
+  .list-menu {
+    align-items: center;
+    gap: 40px;
+    display: flex;
+  }
+
+  .menu {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .list-menu-link {
+    position: relative;
+  }
+  .current {
+    color: #404bbf;
+  }
+
+  .current::after {
+    content: "";
+
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu:hover::after,
+  .menu:focus::after {
+    opacity: 1;
+  }
+
+  .numbers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .address {
+    font-style: normal;
+  }
+
+  .info {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .list .link:hover,
+  .list .link:focus {
+    color: #404bbf;
   }
 }
-
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  .container {
-    width: 1158px;
-  }
-}
-
 @media screen and (max-width: 767px) {
+  .container {
+    max-width: 428px;
+  }
+
+  .mobile-social-links {
+    max-width: 328px;
+  }
+
+  .nav-logo .list-menu {
+    display: none;
+  }
+
+  .container .address {
+    display: none;
+  }
   .nav-logo .list-menu {
     display: none;
   }
@@ -94,14 +184,22 @@ p {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .page-header {
-    padding-top: 23px;
-    padding-bottom: 23px;
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .container {
+    max-width: 768px;
   }
+}
 
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .header-container {
-    display: flex;
     align-items: center;
     justify-content: space-between;
   }
@@ -158,34 +256,36 @@ p {
     padding: 0;
   }
 
-  .mobile-menu-list {
-    color: #2e2f42;
-    font-weight: bold;
-    font-size: 36px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 40px;
-    padding-bottom: 284px;
-  }
-
   .mobile-menu-navigation {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    display: list-item;
     text-decoration: none;
   }
 
+  .mobile-address {
+    font-style: normal;
+  }
+
   .mobile-menu-address {
-    display: flex;
-    flex-direction: column;
-    row-gap: 40px;
-    padding-bottom: 48px;
+    display: block;
+    margin-top: 284px;
   }
 
   .mobile-number {
-    color: #4d5ae5;
+    color: #434445;
     font-weight: bold;
     font-size: 36px;
     line-height: 40px;
     letter-spacing: 0.02em;
-    color: var(--logo-button-color);
+  }
+
+  .mobile-item {
+    margin-bottom: 40px;
   }
 
   .mobile-mail {
@@ -197,7 +297,6 @@ p {
   }
 
   .mobile-menu-social {
-    list-style: none;
     display: flex;
     gap: 56px;
     padding-left: 0;
@@ -232,141 +331,47 @@ p {
   .mobile-menu-open {
     display: none;
   }
-}
 
-.header-container {
-  display: flex;
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-}
-
-.list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
-}
-
-.menu {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--main-text-color);
-  position: relative;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.list-menu-link {
-  position: relative;
-}
-.current {
-  color: #404bbf;
-}
-
-.current::after {
-  content: "";
-
-  position: absolute;
-  display: block;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  background-color: #404bbf;
-  border-radius: 2px;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu:hover::after,
-.menu:focus::after {
-  opacity: 1;
-}
-
-.numbers {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.address {
-  font-style: normal;
-  margin-left: auto;
-}
-
-.info {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.list .link:hover,
-.list .link:focus {
-  color: #404bbf;
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 1158px) {
-  .nav-logo {
-    align-items: center;
-    display: flex;
-  }
   .list-menu {
     display: flex;
   }
-  .list {
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-  }
+
   .numbers {
-    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
   }
-}
-
-.logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--logo-button-color);
-  text-decoration: none;
-  margin-right: 76px;
-}
-
-.log {
-  color: var(--main-text-color);
 }
 
 /*============================= Main Content ==========================*/
 
 /*================ Section 1 =================*/
-@media screen and (min-width: 428px) {
+@media screen and (max-width: 767px) {
   .one {
     background-color: var(--background-hero-color);
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding: 112px 0;
     max-width: 428px;
-    max-height: 432px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/people-office.jpg);
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    );
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
+}
+
+@media screen and (min-width: 428px) {
   .hero {
     font-size: 36px;
     line-height: 1.07;
@@ -377,7 +382,6 @@ p {
     margin: auto;
     margin-bottom: 48px;
   }
-
   .button {
     background-color: var(--logo-button-color);
     font-family: "Roboto", sans-serif;
@@ -403,14 +407,45 @@ p {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .one {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/@x2/bg-mobile-@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .one {
+    padding: 112px 0;
     max-width: 768px;
-    max-height: 436px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tablet@2x/bg-tablet@1x.jpg);
   }
   .hero {
+    margin-bottom: 26px;
+    font-weight: 700;
     font-size: 56px;
     max-width: 496px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .one {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tablet@2x/bg-tablet@2x.jpg);
   }
 }
 
