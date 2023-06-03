@@ -85,8 +85,8 @@ p {
 /*===================== Header + Navigation ======================*/
 
 .container {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -203,6 +203,10 @@ p {
   .header-container {
     align-items: center;
     justify-content: space-between;
+  }
+
+  .modal-window {
+    width: 392px;
   }
 
   .mobile-menu-open {
@@ -379,7 +383,7 @@ p {
   }
 }
 
-@media screen and (min-width: 428px) {
+@media screen and (max-width: 767px) {
   .hero {
     font-size: 36px;
     line-height: 1.07;
