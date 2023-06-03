@@ -525,7 +525,7 @@ p {
   }
 }
 
-@media screen and (min-width: 428px) and (max-width: 1157px) {
+@media screen and (max-width: 1157px) {
   .icon-background {
     display: none;
   }
