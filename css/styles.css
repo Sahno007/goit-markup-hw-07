@@ -383,7 +383,7 @@ p {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 428px) {
   .hero {
     font-size: 36px;
     line-height: 1.07;
