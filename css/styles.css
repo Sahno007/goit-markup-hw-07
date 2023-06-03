@@ -242,6 +242,9 @@ p {
   }
 
   .mobile-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
     padding-left: 40px;
     padding-top: 80px;
