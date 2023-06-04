@@ -151,6 +151,7 @@ p {
   }
 
   .info {
+    size: 12px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
@@ -196,6 +197,9 @@ p {
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+  }
+  .info.link {
+    size: 16px;
   }
 }
 
@@ -915,6 +919,7 @@ p {
   color: #f4f4fd;
 }
 .solution {
+  line-height: 24px;
   text-align: left;
   color: #f4f4fd;
   width: 264px;
